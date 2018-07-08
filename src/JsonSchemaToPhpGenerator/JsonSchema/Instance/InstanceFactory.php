@@ -8,7 +8,7 @@ class InstanceFactory {
 
     public static function buildInstance($key, $value = null)
     {
-        if ($key == 'number') {
+        if ($key == 'number' || $key == 'integer') {
             return new JNumber($value);
         }
         elseif ($key == 'object') {
@@ -16,8 +16,7 @@ class InstanceFactory {
         }
         elseif ($key == 'string') {
             return new JsonString($value);
-        }
-        elseif ($key == 'boolean') {
+        } elseif ($key == 'boolean' || $key == 'bool') {
             return new JBoolean($value);
         }
         else if ($key == 'null') {
