@@ -9,19 +9,19 @@ class InstanceFactory {
     public static function buildInstance($key, $value = null)
     {
         if ($key == 'number') {
-            return new Number($value);
+            return new JNumber($value);
         }
         elseif ($key == 'object') {
-            return new Object($value);
+            return new JObject($value);
         }
         elseif ($key == 'string') {
             return new JsonString($value);
         }
         elseif ($key == 'boolean') {
-            return new Boolean($value);
+            return new JBoolean($value);
         }
         else if ($key == 'null') {
-            return new Null();
+            return new JNull();
         }
 
         throw new UnknownJsonSchemaTypeException('Unknown JSON schema type: ' . $key);

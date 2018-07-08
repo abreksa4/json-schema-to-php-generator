@@ -8,7 +8,7 @@ namespace mpmontanez\JsonSchemaToPhpGenerator\JsonSchema\Instance;
  *
  * A JSON "null" production
  */
-class Null extends Instance
+class JNull extends Instance
 {
     public function __construct()
     {

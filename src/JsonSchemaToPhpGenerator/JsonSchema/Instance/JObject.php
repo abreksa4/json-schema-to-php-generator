@@ -3,18 +3,17 @@
 namespace mpmontanez\JsonSchemaToPhpGenerator\JsonSchema\Instance;
 
 /**
- * Class Number
+ * Class Object
  * @package mpmontanez\JsonSchemaToPhpGenerator\JsonSchema\Instance
  *
- * An arbitrary-precision, base-10 decimal number value, from the JSON "number" production
+ * An unordered set of properties mapping a string to an instance, from the JSON "object" production
  */
-class Number extends Instance {
-
+class JObject extends Instance
+{
     public function __construct($value = null)
     {
-        $this->key = 'number';
-        $this->phpDataType = 'int';
+        $this->key = 'object';
+        $this->phpDataType = '\stdClass';
         $this->value = $value;
     }
-
 }

@@ -8,7 +8,7 @@ namespace mpmontanez\JsonSchemaToPhpGenerator\JsonSchema\Instance;
  *
  * A "true" or "false" value, from the JSON "true" or "false" productions
  */
-class Boolean extends Instance
+class JBoolean extends Instance
 {
     public function __construct($value = false)
     {
